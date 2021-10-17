@@ -1,6 +1,6 @@
 import './App.css';
-import Menubar from './components/Shared/Menubar/Menubar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home/Home';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/">
-            <Menubar></Menubar>
+            <Home></Home>
           </Route>
         </Switch>
       </BrowserRouter>
