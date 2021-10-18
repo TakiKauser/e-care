@@ -7,7 +7,6 @@ const Signup = () => {
 
     const handleRegistration = e => {
         e.preventDefault();
-        console.log("Hye!");
         signInUsingEmailPassword()
             .then((userCredential) => {
                 console.log(userCredential);
@@ -16,15 +15,16 @@ const Signup = () => {
 
     const handleEmailChange = e => {
         setEmail(e.target.value);
-        // const email = e.target.value;
     }
     const handlePasswordChange = e => {
         setPassword(e.target.value);
-        // const password = e.target.value;
     }
 
     return (
         <div>
+            <div>
+
+            </div>
             <div>
                 <h3>Create Account</h3>
                 <form onSubmit={handleRegistration}>
