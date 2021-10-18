@@ -86,10 +86,8 @@ const Footer = () => {
                                         <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                                     </div>
                                     <div className="subscribe-form">
-                                        <form>
-                                            <input type="text" placeholder="Email Address" />
-                                            <button><i><FontAwesomeIcon icon={faPaperPlane} /></i></button>
-                                        </form>
+                                        <input type="text" placeholder="Email Address" />
+                                        <button><i><FontAwesomeIcon icon={faPaperPlane} /></i></button>
                                     </div>
                                 </div>
                             </div>
