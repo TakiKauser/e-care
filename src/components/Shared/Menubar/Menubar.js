@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Menubar.css';
 
 const Menubar = () => {
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -28,13 +30,24 @@ const Menubar = () => {
                             <NavLink to="/contact" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Contact</NavLink>
                         </Nav>
                         <Nav>
-                            <Navbar.Text>
+                            {/* <Navbar.Text>
                                 Signed in as: <a href="#login">Taki Kauser</a>
                             </Navbar.Text>
                             <Navbar.Text>
                                 <a href="#login">Sign Out</a>
-                            </Navbar.Text>
-                            
+                            </Navbar.Text> */}
+                            {
+                                user.email && <span style={{ color: "white" }}>{user.displayName} </span>
+                            }
+                            {
+                                user.email ?
+                                    <button onClick={logOut}>Logout</button>
+                                    :
+                                    <Navbar.Text>
+                                        <NavLink to="/login">Log In</NavLink>
+                                    </Navbar.Text>
+                            }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

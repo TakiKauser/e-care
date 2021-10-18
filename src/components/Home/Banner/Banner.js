@@ -10,6 +10,7 @@ const Banner = () => {
                         className="d-block w-100"
                         src="https://image.freepik.com/free-photo/seniors-talking-each-other_107420-36448.jpg"
                         alt="First slide"
+                        height="400"
                     />
                     <Carousel.Caption>
                         <h3>First slide label</h3>
@@ -21,6 +22,7 @@ const Banner = () => {
                         className="d-block w-100"
                         src="https://image.freepik.com/free-photo/closeup-support-hands_53876-14962.jpg"
                         alt="Second slide"
+                        height="400"
                     />
 
                     <Carousel.Caption>
@@ -33,6 +35,7 @@ const Banner = () => {
                         className="d-block w-100"
                         src="https://image.freepik.com/free-photo/granddaughter-talking-with-her-grandmother-sitting-wheelchair-cheerful-concept-happy-family_1150-4339.jpg"
                         alt="Third slide"
+                        height="400"
                     />
 
                     <Carousel.Caption>
