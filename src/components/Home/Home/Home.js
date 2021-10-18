@@ -1,14 +1,16 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
-import Menubar from '../../Shared/Menubar/Menubar';
+import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
+import Services from '../Services/Services';
 import './Home.css';
 
 const Home = () => {
     return (
         <div>
-            <Menubar></Menubar>
+            <Header></Header>
             <Banner></Banner>
+            <Services></Services>
             <Footer></Footer>
         </div>
     );

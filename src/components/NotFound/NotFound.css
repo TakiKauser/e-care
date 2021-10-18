@@ -1,0 +1,8 @@
+.error-not-found {
+  background-image: url("https://image.freepik.com/free-vector/error-404-concept-landing-page_52683-12757.jpg");
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  background-size: cover;
+}
