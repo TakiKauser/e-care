@@ -37,7 +37,7 @@ const Menubar = () => {
                                 <a href="#login">Sign Out</a>
                             </Navbar.Text> */}
                             {
-                                user.email && <span style={{ color: "white" }}>{user.displayName} </span>
+                                user.email && <span style={{ color: "white" }}>{user.email} </span>
                             }
                             {
                                 user.email ?

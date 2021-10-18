@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [services, setServices] = useState([]);
     const auth = getAuth();
 
     const googleProvider = new GoogleAuthProvider();
@@ -32,17 +33,29 @@ const useFirebase = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+            } else {
+                setUser("");
             }
         });
-    }, [])
+    }, [auth])
+
+    // fetch json data
+    useEffect(() => {
+        fetch("./services.json")
+            .then(response => response.json())
+            .then(jsonData => setServices(jsonData))
+    }, []);
 
     return {
         user,
+        setUser,
         signInUsingGoogle,
         logOut,
         setEmail,
         setPassword,
-        signInUsingEmailPassword
+        signInUsingEmailPassword,
+        services,
+        setServices
     }
 }
 

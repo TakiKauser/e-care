@@ -8,6 +8,7 @@ import Appointment from './components/Appointment/Appointment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Login from './components/UserAuth/Login/Login';
 import Signup from './components/UserAuth/SignUp/Signup';
+import Care from './components/Care/Care';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/appointment">
               <Appointment></Appointment>
+            </PrivateRoute>
+            <PrivateRoute path="/service/care/:careID">
+              <Care></Care>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
