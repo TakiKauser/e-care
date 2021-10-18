@@ -7,14 +7,13 @@ import './NotFound.css';
 
 const NotFound = () => {
     return (
-        <div className='error-not-found'>
+        <div className=''>
             <NavLink to="/">
-                <Button type="submit" className="px-3 m-5" variant="danger">
+                <Button type="button" className="px-3 my-5" variant="primary">
                     <FontAwesomeIcon icon={faArrowLeft} /> Back to Home
                 </Button>
             </NavLink>
-            {/* back-up text as bg-img can rarely found in netlify! */}
-            <h1 className="p-3 text-white bg-danger fw-bolder">404 Page Not Found ! ! !</h1>
+            <h1 className="p-3 my-5 text-white bg-danger fw-bolder">404 Page Not Found ! ! !</h1>
         </div>
     );
 };
