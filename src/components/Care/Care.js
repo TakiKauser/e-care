@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router';
 import useServices from '../../hooks/useServices';
 import './Care.css';
@@ -6,17 +7,19 @@ import './Care.css';
 const Care = () => {
     const { careID } = useParams();
     const { services } = useServices();
-    // console.log(services);
+    const [item, setItem] = useState({});
 
-    const careDetailsItem = services.filter(service => service.id == careID);
-    const { name, description, image } = careDetailsItem[0];
+    useEffect(() => {
+        const careDetailsItem = services.find(service => service.id == careID);
+        setItem(careDetailsItem);
+    }, [careID, services])
 
     return (
         <div className="details-card cart">
-            <h3>{name}</h3>
-            <p>{description}</p>
+            <h3>{item?.name}</h3>
+            <p>{item?.description}</p>
             <hr />
-            <img src={image} alt="" className="img-fluid" />
+            <img src={item?.image} alt="" className="img-fluid" />
         </div >
     );
 };
