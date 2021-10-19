@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import useAuth from '../../hooks/useAuth';
+import useServices from '../../hooks/useServices';
 import './Care.css';
 
 const Care = () => {
     const { careID } = useParams();
-    const { services } = useAuth();
+    const { services } = useServices();
     // console.log(services);
 
     const careDetailsItem = services.filter(service => service.id == careID);

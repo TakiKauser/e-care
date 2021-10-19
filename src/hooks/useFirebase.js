@@ -9,8 +9,6 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [services, setServices] = useState([]);
-    const [doctors, setDoctors] = useState([]);
 
     const auth = getAuth();
 
@@ -41,19 +39,6 @@ const useFirebase = () => {
         });
     }, [auth])
 
-    // fetch json data
-    useEffect(() => {
-        fetch("./services.json")
-            .then(response => response.json())
-            .then(jsonData => setServices(jsonData))
-    }, []);
-
-    useEffect(() => {
-        fetch("./doctorsData.json")
-            .then(response => response.json())
-            .then(jsonData => setDoctors(jsonData))
-    }, []);
-
     return {
         user,
         setUser,
@@ -62,9 +47,6 @@ const useFirebase = () => {
         setEmail,
         setPassword,
         signInUsingEmailPassword,
-        services,
-        setServices,
-        doctors
     }
 }
 

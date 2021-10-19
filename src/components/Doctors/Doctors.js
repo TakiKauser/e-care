@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
+import useDoctors from '../../hooks/useDoctors';
 import Doctor from '../Doctor/Doctor';
 import './Doctors.css';
 
 const Doctors = () => {
-    const { doctors } = useAuth();
+    const { doctors } = useDoctors();
     return (
         <div className="container my-5">
             <h2 className="my-5"> <span className="text-primary fw-bold">e-Care</span> <span className="text-secondary">Doctors</span></h2>

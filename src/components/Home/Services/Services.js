@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
+import useServices from '../../../hooks/useServices';
 import Service from '../Service/Service';
 
 const Services = () => {
-    const { services } = useAuth();
+    const { services } = useServices();
     // console.log(services);
     return (
         <div className="container my-5">
