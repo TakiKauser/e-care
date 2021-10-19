@@ -7,7 +7,6 @@ import Doctors from './components/Doctors/Doctors';
 import Appointment from './components/Appointment/Appointment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Login from './components/UserAuth/Login/Login';
-import Signup from './components/UserAuth/SignUp/Signup';
 import Care from './components/Care/Care';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
@@ -31,9 +30,9 @@ function App() {
             <PrivateRoute path="/doctors">
               <Doctors></Doctors>
             </PrivateRoute>
-            <Route path="/services">
+            <PrivateRoute path="/services">
               <Services></Services>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/appointment">
               <Appointment></Appointment>
             </PrivateRoute>
@@ -48,9 +47,6 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
-            </Route>
-            <Route path="/signup">
-              <Signup></Signup>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
