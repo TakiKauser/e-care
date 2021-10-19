@@ -17,7 +17,7 @@ const Footer = () => {
                                     <FontAwesomeIcon className="contact-icon" icon={faMapMarkerAlt} />
                                     <div className="cta-text">
                                         <h4>Find us</h4>
-                                        <span>1010 Avenue, sw 54321, chandigarh</span>
+                                        <span>57/E, Dhanmondi, Dhaka.</span>
                                     </div>
                                 </div>
                             </div>

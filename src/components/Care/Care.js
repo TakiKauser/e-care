@@ -12,15 +12,11 @@ const Care = () => {
     const { name, description, image } = careDetailsItem[0];
 
     return (
-        <div className="details-card">
-            <div>
-                <h3>{name}</h3>
-                <p>{description}</p>
-            </div>
-            <div><hr /></div>
-            <div>
-                <img src={image} alt="" className="img-fluid" />
-            </div>
+        <div className="details-card cart">
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <hr />
+            <img src={image} alt="" className="img-fluid" />
         </div >
     );
 };

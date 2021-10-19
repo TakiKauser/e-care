@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
+import Appointment from '../../Appointment/Appointment';
+import Doctors from '../../Doctors/Doctors';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 import './Home.css';
@@ -8,10 +8,10 @@ import './Home.css';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
             <Banner></Banner>
             <Services></Services>
-            <Footer></Footer>
+            <Doctors></Doctors>
+            <Appointment></Appointment>
         </div>
     );
 };

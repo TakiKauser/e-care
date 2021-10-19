@@ -9,12 +9,16 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Login from './components/UserAuth/Login/Login';
 import Signup from './components/UserAuth/SignUp/Signup';
 import Care from './components/Care/Care';
+import Footer from './components/Shared/Footer/Footer';
+import Header from './components/Shared/Header/Header';
+import Services from './components/Home/Services/Services';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
+          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -25,6 +29,9 @@ function App() {
             <PrivateRoute path="/doctors">
               <Doctors></Doctors>
             </PrivateRoute>
+            <Route path="/services">
+              <Services></Services>
+            </Route>
             <PrivateRoute path="/appointment">
               <Appointment></Appointment>
             </PrivateRoute>
@@ -41,6 +48,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

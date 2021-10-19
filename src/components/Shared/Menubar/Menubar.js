@@ -25,6 +25,7 @@ const Menubar = () => {
                         <Nav className="mx-auto">
                             <NavLink to="/home" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Home</NavLink>
                             <NavLink to="/doctors" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Doctors</NavLink>
+                            <NavLink to="/services" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Services</NavLink>
                             <NavLink to="/appointment" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Appointment</NavLink>
                             <NavLink to="/about" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">About</NavLink>
                             <NavLink to="/contact" activeStyle={{ color: 'yellow', fontWeight: 'bold' }} className="navlink">Contact</NavLink>

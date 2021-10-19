@@ -1,0 +1,8 @@
+.cart-image{
+    /* width: 100px; */
+    height: 250px;
+    border-radius: 7px;
+    /* margin: 7px; */
+    padding: 3px;
+    border: 1px solid grey;
+}

@@ -1,15 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Signup = () => {
-    const { setEmail, setPassword, signInUsingEmailPassword } = useAuth();
+    const { setEmail, setPassword, signInUsingEmailPassword, setUser } = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || "/";
 
     const handleRegistration = e => {
         e.preventDefault();
         signInUsingEmailPassword()
             .then((userCredential) => {
                 console.log(userCredential);
+                setUser(userCredential);
+                history.push(redirect_uri);
             })
     }
 
