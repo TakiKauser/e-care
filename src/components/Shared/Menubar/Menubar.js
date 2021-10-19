@@ -38,14 +38,14 @@ const Menubar = () => {
                                 <a href="#login">Sign Out</a>
                             </Navbar.Text> */}
                             {
-                                user.email && <span style={{ color: "white" }}>{user.displayName} </span>
+                                user.email && <span className="user-name">{user.displayName} </span>
                             }
                             {
                                 user.email ?
-                                    <button onClick={logOut}>Logout</button>
+                                    <button onClick={logOut} className="menu-btn">Sign Out</button>
                                     :
                                     <Navbar.Text>
-                                        <NavLink to="/login">Log In</NavLink>
+                                        <NavLink to="/login" className="login-menu-link">Log In</NavLink>
                                     </Navbar.Text>
                             }
 

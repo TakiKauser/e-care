@@ -7,3 +7,20 @@
 .navlink:hover {
   color: yellowgreen;
 }
+.user-name {
+  color: orange;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.menu-btn {
+  background-color: rgba(255, 255, 255, 0.856);
+  /* color: white; */
+  font-weight: bold;
+  border-radius: 7px;
+  padding: 3px;
+}
+.login-menu-link{
+  text-decoration: none;
+  font-weight: bold;
+}
