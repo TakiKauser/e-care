@@ -9,15 +9,15 @@ const Signup = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || "/";
+    const redirect_url = location.state?.from || "/services";
 
     const handleRegistration = e => {
         e.preventDefault();
         signInUsingEmailPassword()
-            .then((userCredential) => {
-                console.log(userCredential);
-                setUser(userCredential);
-                history.push(redirect_uri);
+            .then((user) => {
+                console.log(user);
+                setUser(user);
+                history.push(redirect_url);
             })
     }
 

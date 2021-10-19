@@ -49,8 +49,7 @@ const Footer = () => {
                                         <h1>e-Care</h1>
                                     </div>
                                     <div className="footer-text">
-                                        <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                            elit,Lorem ipsum dolor sit amet.</p>
+                                        <p>e-Care is a household name in the nursing service industry in Bangladesh. We provide compassionate nursing services and various types of home care in BD. We have a great team of physiotherapists, nurses, and other professionals.</p>
                                     </div>
                                     <div className="footer-social-icon">
                                         <span>Follow us</span>

@@ -9,12 +9,12 @@ const Login = () => {
     const { signInUsingGoogle } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || "/";
+    const redirect_url = location.state?.from || "/home";
 
     const handleGoogleLogIn = () => {
         signInUsingGoogle()
             .then(result => {
-                history.push(redirect_uri);
+                history.push(redirect_url);
             })
     }
 

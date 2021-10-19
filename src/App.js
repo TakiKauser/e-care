@@ -12,6 +12,8 @@ import Care from './components/Care/Care';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import Services from './components/Home/Services/Services';
+import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -38,6 +40,12 @@ function App() {
             <PrivateRoute path="/service/care/:careID">
               <Care></Care>
             </PrivateRoute>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
