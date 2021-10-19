@@ -12,7 +12,7 @@ initAuth();
 
 const Login = () => {
 
-    const { isLogin, setIsLogin, setEmail, setPassword, setName, handleRegistration, error } = useAuth();
+    const { isLogin, setIsLogin, setEmail, setPassword, setName, handleRegistration, error, setIsLoading } = useAuth();
 
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
@@ -40,6 +40,7 @@ const Login = () => {
             .then(result => {
                 history.push(redirect_url);
             })
+            .finally(() => setIsLoading(false));
     }
     return (
         <div className="">
